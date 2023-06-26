@@ -2,6 +2,7 @@ import "./style.css";
 import frontPage from "./frontPage";
 import loadMenu from "./menu";
 import loadDrinks from "./drinks";
+import contactUs from "./contactUs";
 
 // function component() {
 //   const newDiv = document.createElement("div");
@@ -67,3 +68,5 @@ const contentDiv = document.createElement("div");
 contentDiv.setAttribute("id", "content");
 contentDiv.appendChild(frontPage());
 mainDiv.appendChild(contentDiv);
+
+mainDiv.appendChild(contactUs());
