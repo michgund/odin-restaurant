@@ -54,7 +54,7 @@ export default function loadMenu() {
   );
   menuArr.push(
     dish(
-      "Ragnarok Chocolate Decadence",
+      "Chocolate Ragnarok",
       "Indulge in this heavenly dessert featuring a rich, velvety chocolate mousse layered with crushed hazelnuts and a touch of sea salt. Garnished with a delicate edible gold leaf."
     )
   );
