@@ -1,8 +1,7 @@
-import PrintMe from "./print";
 import "./style.css";
-import Water from "./water.jpeg";
 import frontPage from "./frontPage";
 import loadMenu from "./menu";
+import loadDrinks from "./drinks";
 
 // function component() {
 //   const newDiv = document.createElement("div");
@@ -56,6 +55,10 @@ linkDiv.appendChild(foodLink);
 
 const drinksLink = document.createElement("button");
 drinksLink.textContent = "Drinks";
+drinksLink.addEventListener("click", () => {
+  contentDiv.innerHTML = "";
+  contentDiv.appendChild(loadDrinks());
+});
 linkDiv.appendChild(drinksLink);
 
 mainDiv.appendChild(linkDiv);
