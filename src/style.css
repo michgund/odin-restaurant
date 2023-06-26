@@ -1,12 +1,66 @@
 @font-face {
-  font-family: "DorisPP";
-  src: url(DORISBR.TTF);
-  font-weight: 600;
-  font-style: normal;
+  font-family: "Norse";
+  src: url(./norse/Norse.otf);
+}
+@font-face {
+  font-family: "NorseBold";
+  src: url(./norse/Norsebold.otf);
 }
 
-.red {
+* {
   color: red;
-  font-family: "DorisPP";
-  background: url(./water.jpeg);
+  font-family: NorseBold, Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:hover {
+  cursor: default;
+  user-select: none;
+}
+
+#main {
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./nordic.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  /* align-items: center; */
+}
+
+.link button {
+  padding: 1vh 5vh;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5em;
+}
+
+.link button:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+
+.front-page {
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#main > h1 {
+  font-size: 5em;
 }
