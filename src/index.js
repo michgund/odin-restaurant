@@ -2,6 +2,7 @@ import PrintMe from "./print";
 import "./style.css";
 import Water from "./water.jpeg";
 import frontPage from "./frontPage";
+import loadMenu from "./menu";
 
 // function component() {
 //   const newDiv = document.createElement("div");
@@ -31,7 +32,7 @@ mainDiv.setAttribute("id", "main");
 document.body.appendChild(mainDiv);
 
 const h1 = document.createElement("h1");
-h1.textContent = "Odin's Restaurant";
+h1.textContent = "Valhalla's Feast";
 mainDiv.appendChild(h1);
 
 const linkDiv = document.createElement("div");
@@ -40,12 +41,17 @@ linkDiv.classList.add("link");
 const homeLink = document.createElement("button");
 homeLink.textContent = "Home";
 homeLink.addEventListener("click", () => {
+  contentDiv.innerHTML = "";
   contentDiv.appendChild(frontPage());
 });
 linkDiv.appendChild(homeLink);
 
 const foodLink = document.createElement("button");
 foodLink.textContent = "Menu";
+foodLink.addEventListener("click", () => {
+  contentDiv.innerHTML = "";
+  contentDiv.appendChild(loadMenu());
+});
 linkDiv.appendChild(foodLink);
 
 const drinksLink = document.createElement("button");
@@ -56,4 +62,5 @@ mainDiv.appendChild(linkDiv);
 
 const contentDiv = document.createElement("div");
 contentDiv.setAttribute("id", "content");
+contentDiv.appendChild(frontPage());
 mainDiv.appendChild(contentDiv);

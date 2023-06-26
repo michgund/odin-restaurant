@@ -8,7 +8,6 @@
 }
 
 * {
-  color: red;
   font-family: NorseBold, Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
   box-sizing: border-box;
@@ -18,18 +17,19 @@
 
 *:hover {
   cursor: default;
-  user-select: none;
+  /* user-select: none; */
 }
 
 #main {
-  padding-top: 10vh;
-  height: 100vh;
-  width: 100%;
+  color: red;
+  padding: 5vh 10vh;
+  min-height: 100vh;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(./nordic.webp);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
 }
 
@@ -38,10 +38,11 @@
   display: flex;
   justify-content: center;
   gap: 2em;
-  /* align-items: center; */
+  flex-wrap: wrap;
 }
 
 .link button {
+  color: red;
   padding: 1vh 5vh;
   border-radius: 5px;
   border: none;
@@ -54,13 +55,59 @@
   color: white;
 }
 
-.front-page {
-  width: 100vh;
+#content {
+  margin-top: 2vh;
+  min-width: 55vh;
+  padding: 2vh;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid red;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  text-align: center;
+  line-height: 2em;
+}
+
+#content > div > p:first-of-type {
+  font-size: 2em;
 }
 
 #main > h1 {
   font-size: 5em;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  box-shadow: 2px 2px 10px red;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.food {
+  width: 100%;
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-content: center;
+  gap: 1em;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px white;
+  width: 25vh;
+  height: 35vh;
+}
+
+.food > p:first-of-type {
+  font-size: 1.5em;
 }
